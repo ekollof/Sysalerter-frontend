@@ -1,0 +1,47 @@
+#!/bin/ksh
+#
+
+WGET="/usr/sfw/bin/wget";
+
+PROC=`uname -p`
+MD5_386="@MD5_386@"
+MD5_SPARC="@MD5_SPARC"
+
+echo "Installing system alerter...";
+rm -f /tmp/sysalert
+pkill sysalert 
+sleep 2
+
+OLDPWD=`pwd`;
+cd /tmp
+${WGET} --quiet http://stats.otlupc.net/bin/${PROC}/sysalert
+if [ $? != 0 ]
+then
+	echo "Couldn't fetch binary :("
+	exit 1
+fi
+
+# Compare MD5 sums
+MD5=`digest -a md5 sysalert`
+if [ "${PROC}" = "i386" ]
+then
+	if [ "${MD5}" != "${MD5_386}" ]
+	then
+		echo "Checksum error, bailing"
+		exit
+	fi
+fi
+if [ "${PROC}" = "sparc" ]
+then
+	if [ "${MD5}" != "${MD5_SPARC}" ]
+	then
+		echo "Checksum error, bailing"
+		exit
+	fi
+fi
+
+cp /tmp/sysalert /usr/bin/sysalert
+chmod 755 /usr/bin/sysalert
+echo "Installation succesful. Running sysalerter."
+cd ${OLDPWD}
+/usr/bin/sysalert -l

@@ -1,0 +1,25 @@
+Metadata-Version: 1.0
+Name: process
+Version: 0.7.1
+Summary: a Python module for cross-platform process control
+Home-page: http://trentm.com/projects/process/
+Author: Trent Mick
+Author-email: trentm@activestate.com
+License: MIT License
+Description: This is a cross-platform module for process control.
+        
+        It allows you to launch processes on Windows, Linux and Mac OS X (and
+        other Un*ces) in a consistent way and enables many options and solves
+        some pains associated with existing mechanisms in Python, such as:
+        os.system()
+        os.popen(), os.popen2(), os.popen3(), os.popen4()
+        os.exec*(), os.spanw*()
+        
+        Note that Python 2.4's new subprocess module might be a better
+        alternative to this module in some cases.
+        
+Keywords: process,popen,system,spawn
+Platform: Windows
+Platform: Linux
+Platform: Mac OS X
+Platform: Unix

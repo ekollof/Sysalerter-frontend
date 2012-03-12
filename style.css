@@ -1,0 +1,73 @@
+h1 {
+	font-family: sans-serif;
+}
+
+body {
+	font-family: sans-serif;
+	background: #ddd;
+}
+
+table#hostlist {
+	border: 1px solid #000;
+	border-spacing: 0px;
+}
+
+table#hostlist>th {
+	background: #aaa;
+}
+
+table#hostlist td {
+	border-right: 1px solid #000;
+	background: #ccc;
+	text-align: center;
+}
+
+table#hostlist th {
+	background: #bbb;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+table#hostlist td#fixed {
+	background: #0f0;
+	text-align: left;
+}
+
+table#hostlist td#broken {
+	background: #f00;
+	text-align: left;
+}
+
+table#hostlist span#fixed {
+	background: #0f0;
+}
+
+table#hostlist span#broken {
+	background: #f00;
+}
+
+
+table#hostlist td#seen {
+	background: #bbb;
+}
+
+table#hostlist td#fixedt {
+	text-align: right;
+	font-family: monospace;
+	border-bottom: 1px solid #000;
+}
+
+table#hostlist a#delete {
+	text-shadow: block;
+	background: #f00;
+	color: #fff;
+	font-weight: bold;
+}
+
+
+
+p#dbstat {
+	font-family: fixed;
+	font-size: 8pt;
+}
+

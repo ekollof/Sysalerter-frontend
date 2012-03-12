@@ -1,0 +1,17 @@
+<!DOCTYPE webprojectsession>
+<webprojectsession>
+  <session usePreviewPrefix="0" previewPrefix="" >
+    <itemcursorpositions>
+      <item line="149" column="8" url="draw.php" />
+      <item line="0" column="0" url="graph/jpgraph_flags.php" />
+      <item line="94" column="59" url="submit.php" />
+    </itemcursorpositions>
+    <treestatus>
+      <openfolder url="system" />
+      <openfolder url="system/application" />
+      <openfolder url="system/application/controllers" />
+      <openfolder url="system/application/models" />
+      <openfolder url="system/application/views" />
+    </treestatus>
+  </session>
+</webprojectsession>
